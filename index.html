@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ping Pong Game</title>
+  <link rel="stylesheet" href="ping.css">
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+</head>
+<body>
+  <div id="gameContainer">
+    <canvas id="gameBoard" width="500" height="500"></canvas>
+    <div id="scoreText">0 : 0</div>
+    <div id="timerContainer">
+      <span class="clock">⏰</span> <span id="timer">01:00</span>
+    </div>
+    <div id="winText"></div>
+    <div id="reactRoot"></div>
+    <button id="resetBtn">Reset</button>
+  </div>
+  <div id="instructionsPopup" style="display: none; position: fixed; top: 20%; left: 50%; transform: translate(-50%, -20%); background: white; padding: 20px; border: 2px solid black; text-align: center;">
+    <h2>How to Play</h2>
+    <p>Player 1 (Left Paddle): Use <strong>W</strong> to move up and <strong>S</strong> to move down.</p>
+    <p>Player 2 (Right Paddle): Use <strong>Up Arrow</strong> to move up and <strong>Down Arrow</strong> to move down.</p>
+    <p>Score points by making the ball pass your opponent's paddle!</p>
+    <button id="startBtn" style="margin-top: 10px; padding: 10px 20px; font-size: 16px;">Start Game</button>
+  </div>
+  <script src="ping.js"></script>
+</body>
+</html>
